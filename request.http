@@ -1,0 +1,108 @@
+POST http://localhost:4200/api/auth/store
+Content-Type: application/json
+
+{
+    "username": "hello",
+    "password": "123456789"
+}
+
+###
+POST http://localhost:4200/api/auth/verify
+Content-Type: application/json
+
+{
+    "username": "huy2002",
+    "password": "huy2002109"
+}
+
+
+###
+GET http://localhost:4000/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMTg5MTE0ZGViZDhhYjkxYTFjNWEwZCIsInVzZXJuYW1lIjoiaHV5MjAwMiIsImlhdCI6MTY0NjIwOTQzMywiZXhwIjoxNjQ2MjA5NDQzfQ.gpTij8pQGAK8bjW2El9v5Rm7hOoSSYadOZyrQvjrYfM
+
+DELETE  http://localhost:4200/api/auth/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMTgyOTRjZGNmZGFiOGZlMDBlOTZmMiIsInVzZXJuYW1lIjoiaGVsbG8iLCJpYXQiOjE2NDU3NzA5MTQsImV4cCI6MTY0NTc3MDk0NH0.REfB0ARECQ0opx1xJa4q_J9uBUuDCDO0neR8boyeZq4
+
+###
+
+POST http://localhost:4200/api/auth/token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMTg5MTE0ZGViZDhhYjkxYTFjNWEwZCIsInVzZXJuYW1lIjoiaHV5MjAwMiIsImlhdCI6MTY0NjIwNzU2N30.ZjL1ugYCamNepL7z1rhMTt76Iko-P1n57JgQ9ey5k5g"
+}
+
+###
+
+POST http://localhost:4000/store
+Content-Type: application/json
+
+{
+    "category": "Hành động"
+}
+
+
+###
+GET http://localhost:4000/comic
+
+###
+GET http://localhost:4000/createCategory
+
+###
+
+GET http://localhost:4000/delete?id=621734f1db5c5f5e1e8c24b4&catId=62173422daaf1ab741f71d0f
+
+###
+PUT http://localhost:4000/update?id=621739c18fce36d2a509769d
+Content-Type: application/json
+
+{
+    "title": "updated title",
+    "body": "updated body",
+    "author": "updated author"
+}
+
+###
+
+GET http://localhost:4000/category
+
+###
+
+GET http://localhost:4000/info
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMTg5MTE0ZGViZDhhYjkxYTFjNWEwZCIsInVzZXJuYW1lIjoiaHV5MjAwMiIsImlhdCI6MTY0NjUzOTgyNSwiZXhwIjoxNjQ2NTgzMDI1fQ.cgu4csFS2ZcbEmJvuLow-yj_Zr4G--H2Jwgv_jDVEbg
+
+###
+
+GET https://evening-atoll-90051.herokuapp.com/info
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMTg5MTE0ZGViZDhhYjkxYTFjNWEwZCIsInVzZXJuYW1lIjoiaHV5MjAwMiIsImlhdCI6MTY0ODQzNjg0MCwiZXhwIjoxNjQ4NDgwMDQwfQ.H56vf4hIy7Dbj0T-8YhmfNVYdcQIwUxxH1c9eCUsjxM
+
+
+###
+
+GET http://localhost:4000/getComic/62209737a2372c5b779cfd9e
+
+###
+
+DELETE http://localhost:4000/deleteComic?id=6225497bc66b4f89b60bc672
+
+###
+POST http://localhost:4000/like
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMTg5MTE0ZGViZDhhYjkxYTFjNWEwZCIsInVzZXJuYW1lIjoiaHV5MjAwMiIsImlhdCI6MTY0NjQ2NDQxMSwiZXhwIjoxNjQ2NTA3NjExfQ.fRGN-9caU061JfrF-qHcQPR0_4Tx3x7QPeP7C7kZWDk
+
+{
+    "id": "622305744158cdfbec31da7b",
+    "likeFromUser": 2
+}
+
+
+###
+
+POST http://localhost:4000/comment
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMTg5MTE0ZGViZDhhYjkxYTFjNWEwZCIsInVzZXJuYW1lIjoiaHV5MjAwMiIsImlhdCI6MTY0NjYxOTIyNSwiZXhwIjoxNjQ2NjYyNDI1fQ.6elVPq1QTj3ph8pgiPvofLprefGHNaCF4Wva1LEwX4o
+
+{
+    "comicId": "62254e8adc1893ab528f699f",
+    "comment": "Hello world from a test user"
+}

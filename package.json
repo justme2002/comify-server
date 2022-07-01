@@ -1,0 +1,27 @@
+{
+  "name": "do_an_co_so_2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "justme2002",
+  "license": "MIT",
+  "dependencies": {
+    "argon2": "^0.28.4",
+    "axios": "^0.26.0",
+    "body-parser": "^1.19.2",
+    "cloudinary": "^1.28.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.2.3",
+    "multer": "^1.4.4"
+  },
+  "scripts": {
+    "server": "nodemon server server.js",
+    "auth": "nodemon authServer authServer.js",
+    "adminAuth": "nodemon AdminAuthServer AdminAuthServer.js"
+  }
+}

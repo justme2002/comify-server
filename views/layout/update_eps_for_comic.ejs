@@ -1,0 +1,27 @@
+<div class = "mt-4">
+    <form action="http://localhost:4000/update" method="post" enctype="multipart/form-data">
+        <p class="fs-3">Update eps for comic</p>
+        <div>
+            <label class = "fs-6">Comic</label>
+            <select name = "title" class = "form-select">
+                <option value="">comic...</option>
+                <% comics.map(com => { %>
+                    <option value = "<%- com.title %>"><%- com.title %></option>
+                <% }) %>
+            </select>
+        </div>
+        <div>
+            <label for="epsNum" class = "fs-6">episode</label>
+            <input type="text" name="epsNum" class = "form-control" id="" value="1">
+        </div>
+        <div>
+            <label for="epsImage" class = "fs-6">episode images</label>
+            <input type="file" class = "fs-6" name="epImage" multiple>
+        </div>
+        <div>
+            <input type="submit" class = "btn btn-md text-light bg-primary" value = "update comic">
+        </div>
+    </form>
+</div>
+
+

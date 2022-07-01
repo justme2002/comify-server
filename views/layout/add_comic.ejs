@@ -1,0 +1,47 @@
+<div class = "mt-4">
+    <form action="http://localhost:4000/store" method="post" enctype="multipart/form-data">
+        <p class="fs-3">Create Comic</p>
+        <div>
+            <label for="title" class="form-label fs-6">Title</label>
+            <input type="text" name = "title" class="form-control" placeholder="Title...">
+        </div>
+        <div>
+            <label for="description" class="form-label fs-6">Description</label>
+            <input type="text" name = "description" class="form-control" placeholder="Description...">
+        </div>
+        <div>
+            <label for="author" class="form-label fs-6">Author</label>
+            <input type="text" name = "author" class="form-control" placeholder="Author...">
+        </div>
+        <div>
+            <label for="category" class = "form-label fs-6">Category</label>
+            <select name = "category" class = "fs-6 form-select">
+                <% category.map(cat => { %>
+                    <option value="<%- cat.category %>"><%- cat.category %></option>
+                <% }) %>
+            
+            </select>
+        </div>
+        <div>
+            <label for="backgroundImage" class = "form-label fs-6">Background image</label>
+            <input type="file" class = "fs-6" name="backgroundImage" id="">
+        </div>
+        <div>
+            <label for="descriptionImage" class = "fs-6 form-label">Description image</label>
+            <input type="file" class = "fs-6" name="descriptionImage" multiple>
+        </div>
+        <div>
+            <label for="epsNum" class = "form-label fs-6">episode</label>
+            <input type="text" class = "fs-6" name="epsNum" id="">
+        </div>
+        <div>
+            <label for="epsImage" class = "fs-6">epsImage</label>
+            <input type="file" class = "fs-6" name="epsImage" multiple>
+        </div>
+        <div>
+            <input type="submit" class = "btn btn-md text-light bg-primary mt-3" value = "add comic">
+        </div>
+    </form>
+</div>
+
+
